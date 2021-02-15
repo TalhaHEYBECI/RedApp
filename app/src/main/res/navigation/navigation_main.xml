@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navHome">
+
+    <fragment
+        android:id="@+id/navHome"
+        android:name="com.dgpays.movieapi.view.fragment.HomeFragment"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navMovieDetail"
+        android:name="com.dgpays.movieapi.view.fragment.MovieDetailFragment"
+        tools:layout="@layout/fragment_movie_detail" />
+    <fragment
+        android:id="@+id/navMovieSearch"
+        android:name="com.dgpays.movieapi.view.fragment.MovieSearchFragment"
+        tools:layout="@layout/fragment_movie_search" />
+
+</navigation>

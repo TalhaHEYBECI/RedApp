@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:bind="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="5dp">
+
+    <data>
+        <import type="android.view.View" />
+        <variable
+            name="item"
+            type="com.dgpays.movieapi.data.entity.Movie" />
+    </data>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginBottom="50dp"
+        >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/movieCl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageViewMovie"
+            android:layout_width="wrap_content"
+            android:layout_height="250dp"
+            android:src="@{item.posterPath}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            bind:image="@{item.posterPath}"
+            />
+
+        <TextView
+            android:id="@+id/textViewMovieTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:paddingLeft="8dp"
+            android:paddingTop="4dp"
+            android:paddingRight="8dp"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageViewMovie"
+            tools:text="@{item.title}" />
+
+        <TextView
+            android:id="@+id/textMovieVoteAvarage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textViewMovieTitle"
+            tools:text="@{item.voteAverage}" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</layout>

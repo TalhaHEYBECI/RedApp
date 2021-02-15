@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/backgroundLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/bgImg"
+            android:layout_width="match_parent"
+            android:layout_height="720dp"
+            android:alpha="0.35"
+            android:scaleType="fitXY" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contentBodyConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/imageViewMovie"
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                android:layout_marginTop="20dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="@id/contentBodyConstraintLayout"
+                app:layout_constraintStart_toStartOf="@id/contentBodyConstraintLayout"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewMovieTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:paddingLeft="8dp"
+                android:paddingTop="4dp"
+                android:paddingRight="8dp"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageViewMovie" />
+
+            <TextView
+                android:id="@+id/textMovieVoteAvarage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textViewMovieTitle" />
+
+            <TextView
+                android:id="@+id/textMovieLanguage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textMovieVoteAvarage" />
+
+            <TextView
+                android:id="@+id/textMovieRelaseDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textMovieLanguage" />
+
+            <TextView
+                android:id="@+id/textMovieOverview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textMovieRelaseDate" />
+
+            <WebView
+                android:id="@+id/videoView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_margin="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textMovieOverview"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>
